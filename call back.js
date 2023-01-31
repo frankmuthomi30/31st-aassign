@@ -12,40 +12,25 @@ function displayData(data) {
 
 getData(displayData);
 
+
+
+
+
+
+
 //promise2
 
 function getData() {
-    return new Promise((resolve, reject) => {
+    return new Promise(() => {
       setTimeout(() => {
         resolve(data);
       }, 2000);
     });
   }
-  
-  getData()
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
 
 
 
 
 
-    //3
-    <script>
-    const root = document.getElementById("root");
-    fetch("https://dummy.restapiexample.com/api/v1/employees")
-      .then(response => response.json())
-      .then(data => {
-        data.forEach(item => {
-          const div = document.createElement("div");
-          div.innerHTML = `
-            <p>ID: ${item.id}</p>
-            <p>Employee Name: ${item.employee_name}</p>
-            <p>Employee Salary: ${item.employee_salary}</p>
-            <p>Employee Age: ${item.employee_age}</p>
-          `;
-          root.appendChild(div);
-        });
-      })
-      .catch(error => console.error(error));
-  </script>
+
+    
